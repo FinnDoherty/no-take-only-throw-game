@@ -1,0 +1,408 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://fonts/Lightshadow/Lightshadow.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://assets/dog_animation_frames_7.png" type="Texture" id=2]
+[ext_resource path="res://scripts/Menu.gd" type="Script" id=3]
+[ext_resource path="res://fonts/Seshat/Seshat.otf" type="DynamicFontData" id=4]
+[ext_resource path="res://fonts/label_font_16.tres" type="DynamicFont" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 82
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 36
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 48
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 22
+font_data = ExtResource( 4 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.592157, 0.376471, 0.0352941, 1 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.789062, 0.54224, 0.157196, 1 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 36
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.345098, 0.345098, 0.345098, 1 )
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+
+[sub_resource type="StyleBoxLine" id=9]
+color = Color( 0.788235, 0.541176, 0.156863, 1 )
+thickness = 10
+
+[sub_resource type="StyleBoxLine" id=10]
+color = Color( 0, 0.133333, 1, 1 )
+thickness = 10
+
+[node name="Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -0.357727
+margin_top = 2.17102
+margin_right = 1279.64
+margin_bottom = 722.171
+color = Color( 0, 0.529412, 0.317647, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="title" type="Label" parent="."]
+margin_top = 48.0
+margin_right = 1280.0
+margin_bottom = 147.0
+rect_pivot_offset = Vector2( -671.038, -176.142 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.3125, 0.167254, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "NO TAKE - ONLY THROW"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="instructions" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -252.844
+margin_top = -201.615
+margin_right = 286.156
+margin_bottom = -92.6157
+rect_pivot_offset = Vector2( -671.038, -176.142 )
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.898039, 0.898039, 0.898039, 1 )
+text = "Throw the ball to Jessie as many times as possible inside the time limit"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="instructions2" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -299.48
+margin_top = -20.1996
+margin_right = 239.52
+margin_bottom = 180.8
+rect_pivot_offset = Vector2( -671.038, -176.142 )
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.898039, 0.898039, 0.898039, 1 )
+text = "Aim: Mouse
+Throw: Left click
+M: Quit to Menu"
+align = 2
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="name" type="Label" parent="."]
+margin_left = 11.0
+margin_top = 673.0
+margin_right = 665.0
+margin_bottom = 709.0
+rect_pivot_offset = Vector2( -671.038, -176.142 )
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.898039, 0.898039, 0.898039, 1 )
+text = "Created by Fionn Doherty - Trijam #128"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -177.353
+margin_top = 192.304
+margin_right = 247.647
+margin_bottom = 291.304
+custom_styles/hover = SubResource( 5 )
+custom_styles/pressed = SubResource( 6 )
+custom_styles/focus = SubResource( 6 )
+custom_styles/normal = SubResource( 6 )
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0.898039, 0.898039, 0.898039, 1 )
+text = "Play "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 1114.39, 416.721 )
+scale = Vector2( 1.67447, 1.67447 )
+texture = ExtResource( 2 )
+hframes = 7
+frame = 5
+
+[node name="Panel" type="Panel" parent="."]
+margin_top = 208.836
+margin_right = 362.0
+margin_bottom = 640.836
+custom_styles/panel = SubResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="settings" type="Label" parent="Panel"]
+margin_left = 83.373
+margin_top = 16.9558
+margin_right = 299.373
+margin_bottom = 32.9558
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0.878431, 0.878431, 0.878431, 1 )
+text = "Mouse Settings"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="y sens" type="Label" parent="Panel"]
+margin_left = 47.8844
+margin_top = 148.331
+margin_right = 247.884
+margin_bottom = 164.331
+rect_pivot_offset = Vector2( -352.973, -66.3882 )
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0.878431, 0.878431, 0.878431, 1 )
+text = "Y Sensitivity"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="tick label1" type="Label" parent="Panel"]
+margin_left = 44.6346
+margin_top = 206.014
+margin_right = 67.6346
+margin_bottom = 230.014
+rect_pivot_offset = Vector2( -349.724, -124.072 )
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0.878431, 0.878431, 0.878431, 1 )
+text = "1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="tick label2" type="Label" parent="Panel"]
+margin_left = 108.635
+margin_top = 206.014
+margin_right = 131.635
+margin_bottom = 230.014
+rect_pivot_offset = Vector2( -413.724, -124.072 )
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0.878431, 0.878431, 0.878431, 1 )
+text = "2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="tick label3" type="Label" parent="Panel"]
+margin_left = 172.635
+margin_top = 206.014
+margin_right = 195.635
+margin_bottom = 230.014
+rect_pivot_offset = Vector2( -477.724, -124.072 )
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0.878431, 0.878431, 0.878431, 1 )
+text = "3"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="tick label4" type="Label" parent="Panel"]
+margin_left = 236.635
+margin_top = 206.014
+margin_right = 259.635
+margin_bottom = 230.014
+rect_pivot_offset = Vector2( -541.724, -124.072 )
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0.878431, 0.878431, 0.878431, 1 )
+text = "4"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="tick label5" type="Label" parent="Panel"]
+margin_left = 300.635
+margin_top = 206.014
+margin_right = 323.635
+margin_bottom = 230.014
+rect_pivot_offset = Vector2( -605.724, -124.072 )
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0.878431, 0.878431, 0.878431, 1 )
+text = "5"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Y sens slider" type="HSlider" parent="Panel"]
+margin_left = 43.4145
+margin_top = 160.803
+margin_right = 318.414
+margin_bottom = 222.803
+rect_pivot_offset = Vector2( -348.503, -78.861 )
+custom_styles/slider = SubResource( 9 )
+custom_styles/grabber_area_highlight = SubResource( 10 )
+custom_styles/grabber_area = SubResource( 10 )
+min_value = 0.05
+max_value = 0.25
+step = 0.05
+value = 0.25
+tick_count = 5
+ticks_on_borders = true
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="y axis checkbox" type="CheckBox" parent="Panel"]
+margin_left = 46.7211
+margin_top = 86.2444
+margin_right = 314.721
+margin_bottom = 110.244
+rect_pivot_offset = Vector2( -351.81, -4.30191 )
+custom_fonts/font = ExtResource( 5 )
+text = "   invert  y  axis"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="x sens" type="Label" parent="Panel"]
+margin_left = 47.8844
+margin_top = 324.331
+margin_right = 247.884
+margin_bottom = 340.331
+rect_pivot_offset = Vector2( -352.973, -66.3882 )
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0.878431, 0.878431, 0.878431, 1 )
+text = "X Sensitivity"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="tick label6" type="Label" parent="Panel"]
+margin_left = 44.6346
+margin_top = 382.014
+margin_right = 67.6346
+margin_bottom = 406.014
+rect_pivot_offset = Vector2( -349.724, -124.072 )
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0.878431, 0.878431, 0.878431, 1 )
+text = "1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="tick label7" type="Label" parent="Panel"]
+margin_left = 108.635
+margin_top = 382.014
+margin_right = 131.635
+margin_bottom = 406.014
+rect_pivot_offset = Vector2( -413.724, -124.072 )
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0.878431, 0.878431, 0.878431, 1 )
+text = "2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="tick label8" type="Label" parent="Panel"]
+margin_left = 172.635
+margin_top = 382.014
+margin_right = 195.635
+margin_bottom = 406.014
+rect_pivot_offset = Vector2( -477.724, -124.072 )
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0.878431, 0.878431, 0.878431, 1 )
+text = "3"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="tick label9" type="Label" parent="Panel"]
+margin_left = 236.635
+margin_top = 382.014
+margin_right = 259.635
+margin_bottom = 406.014
+rect_pivot_offset = Vector2( -541.724, -124.072 )
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0.878431, 0.878431, 0.878431, 1 )
+text = "4"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="tick label10" type="Label" parent="Panel"]
+margin_left = 300.635
+margin_top = 382.014
+margin_right = 323.635
+margin_bottom = 406.014
+rect_pivot_offset = Vector2( -605.724, -124.072 )
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color = Color( 0.878431, 0.878431, 0.878431, 1 )
+text = "5"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="x sens slider" type="HSlider" parent="Panel"]
+margin_left = 43.4145
+margin_top = 336.803
+margin_right = 318.414
+margin_bottom = 398.803
+rect_pivot_offset = Vector2( -348.503, -78.861 )
+custom_styles/slider = SubResource( 9 )
+custom_styles/grabber_area_highlight = SubResource( 10 )
+custom_styles/grabber_area = SubResource( 10 )
+min_value = 0.05
+max_value = 0.25
+step = 0.05
+value = 0.25
+tick_count = 5
+ticks_on_borders = true
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="x axis checkbox" type="CheckBox" parent="Panel"]
+margin_left = 46.7211
+margin_top = 262.244
+margin_right = 314.721
+margin_bottom = 286.244
+rect_pivot_offset = Vector2( -351.81, -4.30191 )
+custom_fonts/font = ExtResource( 5 )
+text = "   invert  x  axis"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="value_changed" from="Panel/Y sens slider" to="." method="_on_Y_sens_slider_value_changed"]
+[connection signal="toggled" from="Panel/y axis checkbox" to="." method="_on_y_axis_checkbox_toggled"]
+[connection signal="value_changed" from="Panel/x sens slider" to="." method="_on_x_sens_slider_value_changed"]
+[connection signal="toggled" from="Panel/x axis checkbox" to="." method="_on_x_axis_checkbox_toggled"]
